@@ -1,25 +1,30 @@
 <template>
-  <nav>
-    <h4 class="text-xl">
-      <Bars3Icon class="inline-block h-5 w-5 text-blue-500" />
-      menu (dans <code class="font-mono">/src/App.vue</code>)
-    </h4>
-    <ul>
+  <nav class="bg-blue-200">
+    <ul class="flex p-4 ">
+
       <li>
-        <router-link class="text-red-600 underline" to="/">
-          lien vers
-          <code class="font-mono">/src/pages/index.vue</code>
+        <router-link class="text-black font-bold  px-4" to="/">
+          Home page
+
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-black font-bold  px-4" to="/form">
+          Form
+        </router-link>
+      </li>
+      <li>
+        <router-link class="text-black  font-bold  px-4" to="/classe">
+          Modifier via les classes
         </router-link>
       </li>
     </ul>
   </nav>
 
-  <!-- Affiche les pages -->
-  <Suspense>
-    <router-view class="m-2 border-2 p-2" />
-  </Suspense>
+  <router-view class="m-2 border-2 p-2" />
 </template>
 
 <script setup lang="ts">
-import { Bars3Icon } from "@heroicons/vue/20/solid";
+import MontreProfil from "./components/MontreProfil.vue";
+
 </script>
