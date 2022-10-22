@@ -1,13 +1,10 @@
 <template>
-    <h1 class="text-2xl">Classe</h1>
+    <div>
+        <h1 class="uppercase">Modifier votre chaussure dans l'app.vue via des classes:</h1>
+    </div>
+    <MontreProfil class="" semelle="blue" />
 </template>
 
-<!-- <li>
-    <router-link class="text-white  font-semibold  px-4" to="/classe">
-        Modifier via les classes
-    </router-link>
-</li>
-<div>
-        <h1 class="uppercase">Modifier votre chaussure dans l'app.vue via des classes:</h1>
-</div>
-    <MontreProfil /> -->
+<script setup lang="ts">
+import MontreProfil from "../components/MontreProfil.vue";
+</script>

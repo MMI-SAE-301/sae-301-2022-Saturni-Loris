@@ -2,12 +2,16 @@
   <nav class="bg-blue-700">
     <ul class=" flow-root">
       <div class="flex ">
-        <li>
+        <li class="px-4">
           <RouterLink to="/">Accueil</RouterLink>
         </li>
 
-        <li>
+        <li class="px-4">
           <RouterLink to="/classe">Modifier via les classes</RouterLink>
+        </li>
+
+        <li class="px-4">
+          <RouterLink to="/form">Personnaliser</RouterLink>
         </li>
 
         <li class="float-right">
@@ -22,8 +26,6 @@
 </template>
 
 <script setup lang="ts">
-import MontreProfil from "./components/MontreProfil.vue";
 import LoginLogout from "./components/LoginLogout.vue";
-import FormMontre from "./components/FormMontre.vue";
 
 </script>
