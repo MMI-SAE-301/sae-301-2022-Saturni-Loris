@@ -1,23 +1,20 @@
 <template>
-  <nav class="bg-blue-200">
-    <ul class="flex p-4 ">
+  <nav class="bg-blue-700">
+    <ul class=" flow-root">
+      <div class="flex ">
+        <li>
+          <RouterLink to="/">Accueil</RouterLink>
+        </li>
 
-      <li>
-        <router-link class="text-black font-bold  px-4" to="/">
-          Home page
+        <li>
+          <RouterLink to="/classe">Modifier via les classes</RouterLink>
+        </li>
 
-        </router-link>
-      </li>
-      <li>
-        <router-link class="text-black font-bold  px-4" to="/form">
-          Form
-        </router-link>
-      </li>
-      <li>
-        <router-link class="text-black  font-bold  px-4" to="/classe">
-          Modifier via les classes
-        </router-link>
-      </li>
+        <li class="float-right">
+          <LoginLogout />
+        </li>
+      </div>
+
     </ul>
   </nav>
 
@@ -26,5 +23,7 @@
 
 <script setup lang="ts">
 import MontreProfil from "./components/MontreProfil.vue";
+import LoginLogout from "./components/LoginLogout.vue";
+import FormMontre from "./components/FormMontre.vue";
 
 </script>
