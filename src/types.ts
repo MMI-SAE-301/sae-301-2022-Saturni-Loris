@@ -1,6 +1,5 @@
 export interface Montre {
-  bracelethaut?: string;
-  braceletbas?: string;
+  braclethautbg?: string;
   fondheure?: string;
   oeillet?: string;
   bande?: string;
