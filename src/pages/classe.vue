@@ -1,4 +1,5 @@
-<template>
+
+<template >
     <div>
         <h1 class="text-2xl p-6 ">Modifier votre montre dans l'éditeur de code.</h1>
         <h2 class="text-sm px-6 py-2 ">Rendez-vous dans votre éditeur de code. Puis, rendez-vous dans
@@ -12,3 +13,9 @@
 <script setup lang="ts">
 import MontreProfil from "../components/MontreProfil.vue";
 </script>
+
+<style scoped>
+body {
+    background-color: black;
+}
+</style> 
