@@ -19,7 +19,7 @@ const chaussure = ref<Montre>(props.data ?? {});
             <MontreProfil v-bind="chaussure" id="profil" />
         </div>
         <FormKit type="form" v-model="chaussure">
-            <FormKit name="semelle" label="semelle" value="#FFFFFF" type="radio" :options="colors"
+            <FormKit name="cadran" label="cadran" value="#FFFFFF" type="radio" :options="colors"
                 :sections-schema="{inner:{$el:null},decorator:{$el:null},}" input-class="peer sr-only"
                 options-class="flex gap-1 mb-3 mt-1">
                 <template #label="context">

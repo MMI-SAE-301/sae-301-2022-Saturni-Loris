@@ -1,5 +1,5 @@
 export interface Montre {
-  semelle?: string;
+  cadran?: string;
   empeigne?: string;
   pointe?: string;
   oeillet?: string;
