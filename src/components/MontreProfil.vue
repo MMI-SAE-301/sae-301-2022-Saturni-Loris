@@ -386,26 +386,21 @@ withDefaults(defineProps<Montre>(), {
 }
 
 .st64 {
-    clip-path: url(#SVGID_109_);
-    fill: url(#SVGID_110_);
-}
-
-.st65 {
     clip-path: url(#SVGID_101_);
     fill: #8C98A0;
 }
 
-.st66 {
+.st65 {
     opacity: 0.8;
     clip-path: url(#SVGID_101_);
 }
 
-.st67 {
-    clip-path: url(#SVGID_112_);
+.st66 {
+    clip-path: url(#SVGID_111_);
 }
 
-.st68 {
-    clip-path: url(#SVGID_114_);
-    fill: url(#SVGID_115_);
+.st67 {
+    clip-path: url(#SVGID_113_);
+    fill: url(#SVGID_114_);
 }
 </style>
