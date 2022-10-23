@@ -2,14 +2,7 @@
 import type { Montre } from "@/types";
 
 withDefaults(defineProps<Montre>(), {
-    cadran: "red",
-    empeigne: "white",
-    pointe: "white",
-    oeillet: "white",
-    bande: "white",
-    languette: "white",
-    lacet: "white",
-    trimestre: "white",
+    bracelethautbg: "red"
 });
 </script>
 
