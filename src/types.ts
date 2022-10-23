@@ -1,6 +1,6 @@
 export interface Montre {
   cadran?: string;
-  empeigne?: string;
+  braceletbas?: string;
   pointe?: string;
   oeillet?: string;
   bande?: string;

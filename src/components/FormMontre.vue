@@ -28,7 +28,7 @@ const chaussure = ref<Montre>(props.data ?? {});
                     <span class="sr-only">{{context.option.label}}</span>
                 </template>
             </FormKit>
-            <FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="radio" :options="colors"
+            <FormKit name="braceletbas" label="braceletbas" value="#FFFFFF" type="radio" :options="colors"
                 :sections-schema="{inner:{$el:null},decorator:{$el:null},}" input-class="peer sr-only"
                 options-class="flex gap-1 mb-3 mt-1">
                 <template #label="context">
