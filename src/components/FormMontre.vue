@@ -19,7 +19,7 @@ const chaussure = ref<Montre>(props.data ?? {});
             <MontreProfil v-bind="chaussure" id="profil" />
         </div>
         <FormKit type="form" v-model="chaussure">
-            <FormKit name="cadran" label="cadran" value="#FFFFFF" type="radio" :options="colors"
+            <FormKit name="bracelethaut" label="Haut du bracelet" value="#FFFFFF" type="radio" :options="colors"
                 :sections-schema="{inner:{$el:null},decorator:{$el:null},}" input-class="peer sr-only"
                 options-class="flex gap-1 mb-3 mt-1">
                 <template #label="context">
@@ -28,7 +28,16 @@ const chaussure = ref<Montre>(props.data ?? {});
                     <span class="sr-only">{{context.option.label}}</span>
                 </template>
             </FormKit>
-            <FormKit name="braceletbas" label="braceletbas" value="#FFFFFF" type="radio" :options="colors"
+            <FormKit name="braceletbas" label="Bas du bracelet" value="#FFFFFF" type="radio" :options="colors"
+                :sections-schema="{inner:{$el:null},decorator:{$el:null},}" input-class="peer sr-only"
+                options-class="flex gap-1 mb-3 mt-1">
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full border-2 peer-checked:border-red-600"
+                        :style="{backgroundColor: context.option.value}" />
+                    <span class="sr-only">{{context.option.label}}</span>
+                </template>
+            </FormKit>
+            <FormKit name="fondheure" label="Fond de l'heure" value="#FFFFFF" type="radio" :options="colors"
                 :sections-schema="{inner:{$el:null},decorator:{$el:null},}" input-class="peer sr-only"
                 options-class="flex gap-1 mb-3 mt-1">
                 <template #label="context">

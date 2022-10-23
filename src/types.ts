@@ -1,7 +1,7 @@
 export interface Montre {
-  cadran?: string;
+  bracelethaut?: string;
   braceletbas?: string;
-  pointe?: string;
+  fondheure?: string;
   oeillet?: string;
   bande?: string;
   languette?: string;
