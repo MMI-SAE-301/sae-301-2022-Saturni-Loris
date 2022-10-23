@@ -6,7 +6,7 @@
             <hr>
         </h2>
     </div>
-    <MontreProfil class="p-6" semelle="blue" empeigne="yellow" />
+    <MontreProfil class="p-6" cadranextbg="blue" cadranintbg="yellow" fondaffichageheure="green" />
 </template>
 
 <script setup lang="ts">

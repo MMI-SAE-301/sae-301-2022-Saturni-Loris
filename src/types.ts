@@ -1,10 +1,10 @@
 export interface Montre {
-  braclethautbg?: string;
-  fondheure?: string;
-  oeillet?: string;
-  bande?: string;
-  languette?: string;
-  lacet?: string;
+  fondaffichageheure?: string;
+  cadranintbg?: string;
+  cadranextbg?: string;
+
+  braceletbasbg?: string;
+  bracelethautbg?: string;
   trimestre?: string;
 }
 
