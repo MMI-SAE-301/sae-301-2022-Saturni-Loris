@@ -1,11 +1,10 @@
 export interface Montre {
-  fondaffichageheure?: string;
-  cadranintbg?: string;
-  cadranextbg?: string;
+  ecran?: string;
+  bracelet_haut?: string;
+  bracelet_bas?: string;
+  bouton?: string;
+  cadran?: string;
 
-  braceletbasbg?: string;
-  bracelethautbg?: string;
-  trimestre?: string;
 }
 
 

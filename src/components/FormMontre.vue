@@ -3,11 +3,32 @@ import type { Montre } from "@/types";
 import { colors } from "@/types"
 import { ref } from "vue";
 import MontreProfil from "./MontreProfil.vue";
+import { useRouter } from "vue-router";
 
-const props = defineProps<{
-    data?: Montre;
-    id?: string;
-}>();
+const router = useRouter();
+const montre = ref({});
+const props = defineProps(["id", "Montre"]);
+if (props.id) {
+    // On charge les données de la table montre
+    let { data, error } = await supabase
+        .from("Montre")
+        .select("*")
+        .eq("id", props.id);
+    if (error || !data)
+        console.log("n'a pas pu charger la table Montre :", error);
+    else montre.value = data[0];
+}
+
+async function upsertMontre(dataForm, node) {
+    const { data, error } = await supabase.from("Montre").upsert(dataForm);
+    if (error) node.setErrors([error.message]);
+    else {
+        node.setErrors([]);
+        router.push({ name: "montre-edit-id", params: { id: data[0].id } });
+    }
+}
+
+
 
 const montrevue = ref<Montre>(props.data ?? {});
 
@@ -23,20 +44,10 @@ const montrevue = ref<Montre>(props.data ?? {});
 
         <div class="float-right p-4 bg-white ">
 
-            <FormKit type="form" v-model="montrevue" submit-label="Commander votre montre">
+            <FormKit @submit="upsertMontre" type="form" v-model="montrevue" submit-label="Commander votre montre">
                 <div>
                     <h1 class="font-bold">CADRAN</h1>
-                    <FormKit name="fondaffichageheure" label="Background du cadran" value="#FFFFFF" type="radio"
-                        :options="colors" :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                        input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
-                        <template #label="context">
-                            <div class="h-4 w-6  border-2 peer-checked:border-black"
-                                :style="{ backgroundColor: context.option.value }" />
-                            <span class="sr-only">{{ context.option.label }}</span>
-                        </template>
-                    </FormKit>
-
-                    <FormKit name="cadranintbg" label="Cadran intérieur" value="#FFFFFF" type="radio" :options="colors"
+                    <FormKit name="ecran" label="Background du cadran" value="#FFFFFF" type="radio" :options="colors"
                         :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
                         input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
                         <template #label="context">
@@ -45,40 +56,6 @@ const montrevue = ref<Montre>(props.data ?? {});
                             <span class="sr-only">{{ context.option.label }}</span>
                         </template>
                     </FormKit>
-
-                    <FormKit name="cadranextbg" label="Cadran extérieur" value="#FFFFFF" type="radio" :options="colors"
-                        :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                        input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
-                        <template #label="context">
-                            <div class="h-4 w-6  border-2 peer-checked:border-black"
-                                :style="{ backgroundColor: context.option.value }" />
-                            <span class="sr-only">{{ context.option.label }}</span>
-                        </template>
-                    </FormKit>
-                </div>
-
-                <div class="py-8">
-                    <h1 class="font-bold">BRACELET</h1>
-                    <FormKit name="braceletbasbg" label="Bracelet bas" value="#FFFFFF" type="radio" :options="colors"
-                        :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                        input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
-                        <template #label="context">
-                            <div class="h-4 w-6  border-2 peer-checked:border-black"
-                                :style="{ backgroundColor: context.option.value }" />
-                            <span class="sr-only">{{ context.option.label }}</span>
-                        </template>
-                    </FormKit>
-
-                    <FormKit name="bracelethautbg" label="Bracelet haut" value="#FFFFFF" type="radio" :options="colors"
-                        :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                        input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
-                        <template #label="context">
-                            <div class="h-4 w-6  border-2 peer-checked:border-black"
-                                :style="{ backgroundColor: context.option.value }" />
-                            <span class="sr-only">{{ context.option.label }}</span>
-                        </template>
-                    </FormKit>
-
                 </div>
             </FormKit>
         </div>

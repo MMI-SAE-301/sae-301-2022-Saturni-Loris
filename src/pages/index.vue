@@ -31,6 +31,8 @@
 
   </div>
 
+  <FormMontre />
+
 
   <div>
 
@@ -45,4 +47,5 @@
 
 <script setup lang="ts">
 import MontreProfil from "../components/MontreProfil.vue";
+import FormMontre from '../components/FormMontre.vue'
 </script>
