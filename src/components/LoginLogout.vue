@@ -18,16 +18,18 @@ supabase.auth.onAuthStateChange((event, session) => {
     }
 })
 
+
+
 </script>
 
 <template>
-    <div class="flex justify-center min-h-screen bg-gray-100 antialiased">
+
+    <div class="flex justify-center min-h-screen ">
         <div class="container sm:mt-40 mt-24 my-auto max-w-md border-2 border-gray-200 p-3 bg-white">
             <!-- header -->
             <div class="text-center m-6">
-                <h1 class="text-3xl font-semibold text-gray-700">Forgot your password?</h1>
-                <p class="text-gray-500">Just enter your email address below and we'll send you a link to reset your
-                    password!</p>
+                <h1 class="text-3xl font-semibold text-gray-700">Connectez-vous</h1>
+                <p class="text-gray-500">Créer</p>
             </div>
             <!-- sign-in -->
             <div class="m-6">
@@ -43,12 +45,7 @@ supabase.auth.onAuthStateChange((event, session) => {
                             class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none duration-100 ease-in-out">Send
                             reset link</button>
                     </div>
-                    <p class="text-sm text-center text-gray-400">
-                        Don&#x27;t have an account yet?
-                        <a href="#!"
-                            class="font-semibold text-indigo-500 focus:text-indigo-600 focus:outline-none focus:underline">Sign
-                            up</a>.
-                    </p>
+
                 </form>
                 <!-- seperator -->
                 <div class="flex flex-row justify-center mb-8">
@@ -75,8 +72,8 @@ supabase.auth.onAuthStateChange((event, session) => {
                         </svg>
                         Google
                     </button>
-                    <button
-                        class="bg-gray-700 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-gray-800 duration-100 ease-in-out">
+                    <button @click="loginWithFacebook()" class=" bg-gray-700 text-white w-full p-2 flex flex-row justify-center gap-2 items-center
+                        rounded-sm hover:bg-gray-800 duration-100 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px">
                             <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z" />
                             <path fill="#fff"
@@ -89,26 +86,17 @@ supabase.auth.onAuthStateChange((event, session) => {
         </div>
     </div>
 
-    <div class="">
-        <h1>{{ msg }}</h1>
-        <p class="text-center">
-            Bienvenue
-        </p>
-        <div class="flex border-2">
-            <img class="" src="../../public/logogoogle.png" alt="logo de google">
-            <button @click="login()">Connecter vous avec Google</button><br>
-        </div>
-        <button @click="logout()">Deconnexion</button><br>
-        <label id="status">Vous n'êtes pas connecter</label>
-    </div>
-
 </template>
+
 
 <script>
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFobHpxZ2F1a3Jnc2dtb3JneWVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjY2MTUzMjgsImV4cCI6MTk4MjE5MTMyOH0.fa3nOVKjlOftF4qJz9u3uEj2HZrL2HmgtlpzMgIC1SU'
 const SUPABASE_URL = "https://ahlzqgaukrgsgmorgyem.supabase.co"
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 export default {
+
+
+
     methods: {
         async logout() {
             try {
@@ -130,8 +118,31 @@ export default {
             } catch (error) {
                 alert(error.error_description || error.message);
             }
-        }
+        },
+
+        async loginWithFacebook() {
+            try {
+                const { user, session, error } = await supabase.auth.signIn({
+                    provider: 'facebook'
+                });
+                if (error) throw error;
+            } catch (error) {
+                alert(error.error_description || error.message);
+            }
+        },
+
+        async logoutfb() {
+            try {
+                const { error } = await supabase.auth.signOut()
+            } catch (error) {
+                alert(error.error_description || error.message);
+            }
+        },
+
+
     }
 }  
 </script>
+
+
 
