@@ -25,37 +25,38 @@ supabase.auth.onAuthStateChange((event, session) => {
 <template>
 
     <div class="flex justify-center min-h-screen ">
-        <div class="container sm:mt-40 mt-24 my-auto max-w-md border-2 border-gray-200 p-3 bg-white">
-            <!-- header -->
+        <div class="container sm:mt-40 mt-24 my-auto max-w-md  p-3 bg-noirfond">
+
             <div class="text-center m-6">
-                <h1 class="text-3xl font-semibold text-gray-700">Connectez-vous</h1>
-                <p class="text-gray-500">Créer</p>
+                <h1 class="text-3xl font-semibold font-roboto text-blanctext">S'INSCRIRE</h1>
+                <p class="font-thin text-sm font-roboto text-blanctext">Créer votre compte, afin de pouvoir réaliser
+                    toutes vos
+                    envies en personnalisant nos montre TikTak.</p>
             </div>
-            <!-- sign-in -->
-            <div class="m-6">
+
+            <div class=" m-6">
                 <form class="mb-4">
                     <div class="mb-6">
-                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email
-                            Address</label>
-                        <input type="email" name="email" id="email" placeholder="Your email address"
+                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                            Address mqil</label>
+                        <input type="email" name="email" id="email" placeholder="xxx@xxx.xxx"
                             class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
                     </div>
                     <div class="mb-6">
                         <button type="button"
-                            class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none duration-100 ease-in-out">Send
-                            reset link</button>
+                            class="w-full px-3 py-4 text-noirfond bg-blanctext focus:outline-none duration-100 ease-in-out">S'INSCRIRE</button>
                     </div>
 
                 </form>
                 <!-- seperator -->
                 <div class="flex flex-row justify-center mb-8">
-                    <span class="absolute bg-white px-4 text-gray-500">ou connectez-vous avec</span>
+                    <span class="absolute bg-noirfond px-4 text-blanctext">ou connectez-vous avec</span>
                     <div class="w-full bg-gray-200 mt-3 h-px"></div>
                 </div>
                 <!-- alternate sign-in -->
                 <div class="flex flex-row gap-2">
                     <button @click="login()"
-                        class="bg-green-500 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-green-600 duration-100 ease-in-out">
+                        class="bg-blanctext text-noirfond  w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-beige duration-100 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-5"
                             viewBox="0 0 48 48">
                             <defs>
@@ -65,17 +66,17 @@ supabase.auth.onAuthStateChange((event, session) => {
                             <clipPath id="b">
                                 <use xlink:href="#a" overflow="visible" />
                             </clipPath>
-                            <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
-                            <path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z" />
-                            <path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z" />
-                            <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                            <path clip-path="url(#b)" fill="#1A1B20" d="M0 37V11l17 13z" />
+                            <path clip-path="url(#b)" fill="#1A1B20" d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                            <path clip-path="url(#b)" fill="#1A1B20" d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                            <path clip-path="url(#b)" fill="#1A1B20" d="M48 48L17 24l-4-3 35-10z" />
                         </svg>
                         Google
                     </button>
-                    <button @click="loginWithFacebook()" class=" bg-gray-700 text-white w-full p-2 flex flex-row justify-center gap-2 items-center
-                        rounded-sm hover:bg-gray-800 duration-100 ease-in-out">
+                    <button @click="loginWithFacebook()" class=" bg-blanctext text-noirfond  w-full p-2 flex flex-row justify-center gap-2 items-center
+                        rounded-sm hover:bg-beige duration-100 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px">
-                            <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z" />
+                            <path fill="#1A1B20" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z" />
                             <path fill="#fff"
                                 d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z" />
                         </svg>

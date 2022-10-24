@@ -8,10 +8,14 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'brunclair': '#D9AC8D',
-        'brunfonce': '#683309',
-        'beige': '#E9D5C4',
 
+        'beige': '#F6EBE2',
+        'noirfond': "#1A1B20",
+        'blanctext': "#FEF9F5"
+      },
+
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
       },
     },
   },
