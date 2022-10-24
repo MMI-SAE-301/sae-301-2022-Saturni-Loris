@@ -14,20 +14,94 @@ supabase.auth.onAuthStateChange((event, session) => {
         document.getElementById('status').innerHTML = 'You are not logged !!!';
     } else {
         //alert('session value: ' + JSON.stringify(session)) 
-        document.getElementById('status').innerHTML = 'You are logged with the email: ' + session.user.email;
+        document.getElementById('status').innerHTML = 'Vous êtes connecté avec le compte: ' + session.user.email;
     }
 })
 
 </script>
 
 <template>
-    <h1>{{ msg }}</h1>
-    <p>
-        Please login if you have an account or register :
-    </p>
-    <button @click="login()">Sign In</button><br>
-    <button @click="logout()">Sign Out</button><br>
-    <label id="status">You are not yet logged ! </label>
+    <div class="flex justify-center min-h-screen bg-gray-100 antialiased">
+        <div class="container sm:mt-40 mt-24 my-auto max-w-md border-2 border-gray-200 p-3 bg-white">
+            <!-- header -->
+            <div class="text-center m-6">
+                <h1 class="text-3xl font-semibold text-gray-700">Forgot your password?</h1>
+                <p class="text-gray-500">Just enter your email address below and we'll send you a link to reset your
+                    password!</p>
+            </div>
+            <!-- sign-in -->
+            <div class="m-6">
+                <form class="mb-4">
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email
+                            Address</label>
+                        <input type="email" name="email" id="email" placeholder="Your email address"
+                            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                        <button type="button"
+                            class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none duration-100 ease-in-out">Send
+                            reset link</button>
+                    </div>
+                    <p class="text-sm text-center text-gray-400">
+                        Don&#x27;t have an account yet?
+                        <a href="#!"
+                            class="font-semibold text-indigo-500 focus:text-indigo-600 focus:outline-none focus:underline">Sign
+                            up</a>.
+                    </p>
+                </form>
+                <!-- seperator -->
+                <div class="flex flex-row justify-center mb-8">
+                    <span class="absolute bg-white px-4 text-gray-500">ou connectez-vous avec</span>
+                    <div class="w-full bg-gray-200 mt-3 h-px"></div>
+                </div>
+                <!-- alternate sign-in -->
+                <div class="flex flex-row gap-2">
+                    <button @click="login()"
+                        class="bg-green-500 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-green-600 duration-100 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-5"
+                            viewBox="0 0 48 48">
+                            <defs>
+                                <path id="a"
+                                    d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                            </defs>
+                            <clipPath id="b">
+                                <use xlink:href="#a" overflow="visible" />
+                            </clipPath>
+                            <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                            <path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                            <path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                            <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                        </svg>
+                        Google
+                    </button>
+                    <button
+                        class="bg-gray-700 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-gray-800 duration-100 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="30px" height="30px">
+                            <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z" />
+                            <path fill="#fff"
+                                d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z" />
+                        </svg>
+                        Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="">
+        <h1>{{ msg }}</h1>
+        <p class="text-center">
+            Bienvenue
+        </p>
+        <div class="flex border-2">
+            <img class="" src="../../public/logogoogle.png" alt="logo de google">
+            <button @click="login()">Connecter vous avec Google</button><br>
+        </div>
+        <button @click="logout()">Deconnexion</button><br>
+        <label id="status">Vous n'êtes pas connecter</label>
+    </div>
+
 </template>
 
 <script>
