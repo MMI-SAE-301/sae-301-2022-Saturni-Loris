@@ -2,9 +2,9 @@
 
 - **Nom :** Saturni
 - **Prénom :** Loris
-- **URL maquette Figma:**
+- **URL maquette Figma:**https://www.figma.com/file/EIZDLRDsezVTDIjrC3KiFu/SAE301_LorisSaturni?node-id=2%3A59
 - **URL publique du site :**
-- **URL projet Supabase :**
+- **URL projet Supabase :**https://ahlzqgaukrgsgmorgyem.supabase.co
   - [ ] Avez-vous invité abdallah.makhoul@univ-fcomte.fr dans votre 'Organisation' Supabase ?
 
 # Auto-évaluation
