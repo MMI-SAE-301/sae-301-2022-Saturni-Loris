@@ -32,11 +32,12 @@ Noté sur 40.
 - Code HTML spécifiquement sémantique et accessible (0-1-2pts)
 
 - [x] usage de Classes utilitaires (1pt)
- - Faite vous-même un lien vers `/src/App.vue` ligne 21 : [lien fait vous-même](/src/App.vue#L21)
-  - lien vers sa définition
-  - lien vers son usage
+  - [lien vers sa définition](/tailwind.config.js#L12)
+  - [lien vers sa son usage](/src/App.vue#L23)
+
 - [ ] Composants graphiques (0-1-2pts)
-  - liens
+  - [lien](/src/components/LoginLogout.vue#L19)
+
 - Technique CSS (0-1-2pts)
   - Quelles techniques (Eg. Styles graphiques (répétés) tous ajoutés par CSS et/ou
     config. Tailwind (eg. before/after avec content, background...))
@@ -55,9 +56,9 @@ Noté sur 40.
   - [ ] Mise en place avec usage de custom property pour les couleurs. Ou usage de DaisyUI AVEC thèmes perso
     - liens
 - "tailwin.config.js" (0-1-2pts)
-  - [ ] usage basique couleurs/fonts
+  - [X] [usage basique couleurs/fonts](/tailwind.config.js#L17)
   - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
-    - liens
+    - [lien](/tailwind.config.js#L12)
 - Composants "accessibles" (0-1-2pts)
   - [ ] textes "accessibles" (eg. 'sr-only')
   - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
