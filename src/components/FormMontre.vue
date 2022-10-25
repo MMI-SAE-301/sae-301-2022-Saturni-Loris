@@ -47,6 +47,16 @@ const montrevue = ref<Montre>(props.data ?? {});
 
             <FormKit @submit="upsertmontre" type="form" v-model="montrevue" submit-label="Commander votre montre">
                 <div>
+                    <FormKit name="ecran" label="Écran" value="#000000" type="radio" :options="colors"
+                        :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
+                        input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
+                        <template #label="context">
+                            <div class="h-4 w-6  border-2 peer-checked:border-black"
+                                :style="{ backgroundColor: context.option.value }" />
+                            <span class="sr-only">{{ context.option.label }}</span>
+                        </template>
+                    </FormKit>
+
                     <FormKit name="bouton" label="Bouton" value="#000000" type="radio" :options="colors"
                         :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
                         input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
@@ -66,6 +76,8 @@ const montrevue = ref<Montre>(props.data ?? {});
                             <span class="sr-only">{{ context.option.label }}</span>
                         </template>
                     </FormKit>
+
+
 
                     <FormKit name="cadran" label="Cadran" value="#000000" type="radio" :options="colors"
                         :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
@@ -87,12 +99,11 @@ const montrevue = ref<Montre>(props.data ?? {});
                         </template>
                     </FormKit>
 
-                    <FormKit name="materiaux.value" label="materiaux.value" type="radio" :options="materiaux"
+                    <FormKit name="materiaux.value" label="Matériaux" type="radio" :options="materiaux"
                         :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                        input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
+                        input-class="peer sr-only" options-class="flex gap-6 mb-3 mt-1">
                         <template #label="context">
-                            <img class="h-16 w-16 rounded-full border-2 peer-checked:border-red-600"
-                                :src="context.option.value" />
+                            <img class="h-4 w-6  border-2 peer-checked:border-black" :src="context.option.value" />
                             <span class="">{{ context.option.label }}</span>
                         </template>
                     </FormKit>
