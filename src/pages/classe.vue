@@ -1,4 +1,4 @@
-
+<!-- 
 <template >
     <div>
         <h1 class="text-2xl p-6 ">Modifier votre montre dans l'éditeur de code.</h1>
@@ -18,4 +18,4 @@ import MontreProfil from "../components/MontreProfil.vue";
 body {
     background-color: black;
 }
-</style> 
+</style>  -->

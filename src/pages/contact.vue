@@ -34,6 +34,24 @@ supabase.auth.onAuthStateChange((event, session) => {
                     </div>
 
                     <div class=" m-6">
+                        <form class="mb-4">
+                            <div class="mb-6">
+                                <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">
+                                    Address mqil</label>
+                                <input type="email" name="email" id="email" placeholder="xxx@xxx.xxx"
+                                    class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                            </div>
+                            <div class="mb-6">
+                                <button type="button"
+                                    class="w-full px-3 py-4 text-noirfond bg-blanctext focus:outline-none duration-100 ease-in-out">CONTACTEZ-NOUS</button>
+                            </div>
+
+                        </form>
+
+                        <div class="flex flex-row justify-center mb-8">
+                            <span class="absolute bg-noirfond px-4 text-blanctext">ou connectez-vous avec</span>
+                            <div class="w-full bg-gray-200 mt-3 h-px"></div>
+                        </div>
 
                         <div class="flex flex-row gap-2">
                             <button @click="login()"
@@ -73,55 +91,7 @@ supabase.auth.onAuthStateChange((event, session) => {
 
 
 <script>
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFobHpxZ2F1a3Jnc2dtb3JneWVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjY2MTUzMjgsImV4cCI6MTk4MjE5MTMyOH0.fa3nOVKjlOftF4qJz9u3uEj2HZrL2HmgtlpzMgIC1SU'
-const SUPABASE_URL = "https://ahlzqgaukrgsgmorgyem.supabase.co"
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-export default {
-    methods: {
-        async logout() {
-            try {
-                const { user, session, error } = await supabase.auth.signOut();
-                if (error) throw error;
-                document.getElementById('status').innerHTML = 'You are disconnected !'
-            } catch (error) {
-                alert(error.error_description || error.message);
-            }
-        },
-        //this method allows to log in the system using Google provider 
 
-        async login() {
-            try {
-                const { user, session, error } = await supabase.auth.signIn({
-                    provider: 'google',
-                });
-                if (error) throw error;
-            } catch (error) {
-                alert(error.error_description || error.message);
-            }
-        },
-
-        async loginWithFacebook() {
-            try {
-                const { user, session, error } = await supabase.auth.signIn({
-                    provider: 'facebook'
-                });
-                if (error) throw error;
-            } catch (error) {
-                alert(error.error_description || error.message);
-            }
-        },
-
-        async logoutfb() {
-            try {
-                const { error } = await supabase.auth.signOut()
-            } catch (error) {
-                alert(error.error_description || error.message);
-            }
-        },
-
-
-    }
-}  
 </script>
 
 

@@ -1,5 +1,4 @@
-<script setup lang="ts">
-import MontreProfil from "@/components/MontreProfil.vue";
+<!-- <script setup lang="ts">
 import FormMontre from "@/components/FormMontre.vue";
 </script>
   
@@ -10,4 +9,4 @@ import FormMontre from "@/components/FormMontre.vue";
     </h1>
     <FormMontre />
   </div>
-</template>
+</template> -->

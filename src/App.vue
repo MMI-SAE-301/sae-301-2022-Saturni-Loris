@@ -10,13 +10,13 @@
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
           <div class="flex items-center justify-between  py-6 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1">
-              <div class="">
+              <a href="/">
                 <svg width="56" height="42" viewBox="0 0 76 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M8.073 6.55H0.39V0.738998H22.698V6.55H14.976V28H8.073V6.55ZM32.4401 0.738998H39.3431V28H32.4401V0.738998ZM50.4425 0.738998H57.3455V12.049L66.7445 0.738998H74.9345L63.8975 13.999L75.6755 28H67.4855L57.3455 15.949V28H50.4425V0.738998ZM8.073 40.55H0.39V34.739H22.698V40.55H14.976V62H8.073V40.55ZM30.1001 34.739H36.8861L47.7671 62H40.7081L38.5241 56.384H28.4621L26.2781 62H19.1801L30.1001 34.739ZM36.8081 51.08L33.4931 41.915L30.1391 51.08H36.8081ZM50.505 34.739H57.408V46.049L66.807 34.739H74.997L63.96 47.999L75.738 62H67.548L57.408 49.949V62H50.505V34.739Z"
                     fill="#F5F6F1" />
                 </svg>
-              </div>
+              </a>
             </div>
             <div class="-my-2 -mr-2 md:hidden">
               <button type="button"
@@ -36,7 +36,7 @@
               <a href="/" class="text-sm font-medium hover:text-beige text-blanctext hover:underline">ACCUEIL</a>
               <a href="produits"
                 class="text-sm font-medium hover:text-beige text-blanctext hover:underline">PRODUITS</a>
-              <a href="#" class="text-sm font-medium text-blanctext hover:text-beige hover:underline">CONTACT</a>
+              <a href="contact" class="text-sm font-medium text-blanctext hover:text-beige hover:underline">CONTACT</a>
 
 
             </nav>
