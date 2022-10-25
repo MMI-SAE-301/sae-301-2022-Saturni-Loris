@@ -1,7 +1,7 @@
 <template>
   <div class="">
 
-    <div class="bg-blanctext text-center py-4 font-roboto">Pas d’idée pour un cadeau de noël ? Profitez des frais
+    <div class="bg-blanctext text-center py-3 font-roboto">Pas d’idée pour un cadeau de noël ? Profitez des frais
       d’expédition gratuits sur les 50<strong>
         premières ventes</strong>
     </div>
@@ -44,7 +44,7 @@
               <a href="login">
                 <img class="p-2 w-auto sm:h-10" src="../public/person_icon.svg" alt="icon de panier">
               </a>
-              <a href="#">
+              <a href="panier">
                 <img class="p-2 w-auto sm:h-10" src="../public/panier_icon.svg" alt="icon de panier">
               </a>
 

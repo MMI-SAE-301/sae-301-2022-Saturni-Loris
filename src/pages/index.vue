@@ -9,9 +9,17 @@
     </div>
   </div>
   <div>
-    <h2 class="text-beige font-thin flex justify-center min-h-screen text-center pt-6">Imaginez que vous pouviez
+    <h2 class="text-beige font-thin flex justify-center pb-64 text-center pt-6">Imaginez que vous pouviez
       entièrement
       personnaliser votre montre.<br>
       En partant d’un modèle rafiné, minimaliste et épuré. <br> Créer l’accessoire qui vous ressemble.</h2>
+  </div>
+
+  <div class="px-48 font-light underline text-blanctext">
+    <h3>CLASSE LISTE</h3>
+  </div>
+
+  <div>
+
   </div>
 </template>
