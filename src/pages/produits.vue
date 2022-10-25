@@ -1,5 +1,3 @@
 <template>
-  <div class="bg-noirfond">
     <h1>AAA</h1>
-  </div>
 </template>

@@ -22,9 +22,10 @@
           </div>
           <nav class="hidden space-x-20 md:flex">
 
-            <a href="index" class="text-sm font-semibold text-blanctext hover:underline">ACCUEIL</a>
-            <a href="#" class="text-sm font-semibold text-blanctext hover:underline">PRODUITS</a>
-            <a href="#" class="text-sm font-semibold text-blanctext hover:underline">CONTACT</a>
+            <a href="index" class="text-sm font-semibold hover:text-beige text-blanctext hover:underline">ACCUEIL</a>
+            <a href="produits"
+              class="text-sm font-semibold hover:text-beige text-blanctext hover:underline">PRODUITS</a>
+            <a href="#" class="text-sm font-semibold text-blanctext hover:text-beige hover:underline">CONTACT</a>
 
 
           </nav>
@@ -72,7 +73,7 @@
   </div>
 
   <Suspense>
-    <router-view class="m-2 border-2 p-2" />
+    <router-view class="" />
   </Suspense>
 </template>
 
@@ -81,3 +82,8 @@
 
 </script>
 
+<style>
+body {
+  background-color: #1A1B20;
+}
+</style>

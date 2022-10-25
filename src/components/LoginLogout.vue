@@ -23,14 +23,13 @@ supabase.auth.onAuthStateChange((event, session) => {
 </script>
 
 <template>
-    <div class="bg-noirfond">
+    <div>
         <div class="">
             <div>
 
             </div>
             <div class="flex justify-center min-h-screen ">
-                <div
-                    class="container sm:mt-40 mt-24 my-auto max-w-md  p-3 bg-gradient-to-t from-blanctext via-gray-00 via-gray-900 to-noirfond">
+                <div class="container sm:mt-40 mt-24 my-auto max-w-md  p-3 shadow-2xl bg-noirfond">
 
                     <div class="text-center m-6">
                         <h1 class="text-3xl font-semibold font-roboto text-blanctext">S'INSCRIRE</h1>
