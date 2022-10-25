@@ -4,7 +4,7 @@ export interface Montre {
   bracelet_bas?: string;
   bouton?: string;
   cadran?: string;
-
+  materiaux?: { label: '', value: '' }
 }
 
 
@@ -22,3 +22,20 @@ export const colors = {
   "#800000": "Marron",
   "#808000": "Olive",
 };
+
+
+export const materiaux = [
+  {
+    value: "/public/materiaux/cuir.webp",
+    label: "Cuir"
+  },
+  {
+    value: "/public/materiaux/carbone.png",
+    label: "Carbone"
+  },
+  {
+    value: "/public/materiaux/pierre.jpg",
+    label: "Pierre"
+  },
+
+]

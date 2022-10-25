@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Montre } from "@/types";
+import { materiaux } from "@/types";
 
 withDefaults(defineProps<Montre>(), {
     bracelet_bas: "red",
@@ -13,6 +14,15 @@ withDefaults(defineProps<Montre>(), {
 
 
 <template>
+    <defs>
+        <pattern id="cuir" patternUnits="userSpaceOnUse" width="300" height="300">
+            <image href="../../public/materiaux/cuir.webp" x="0" y="0" width="300" height="300" />
+        </pattern>
+        <pattern id="pierre" patternUnits="userSpaceOnUse" width="300" height="300">
+            <image href="../../public/materiaux/pierre.jpg" x="0" y="0" width="300" height="300" />
+        </pattern>
+    </defs>
+
     <svg width="385" height="676" viewBox="0 0 385 676" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M371 230H377C381.418 230 385 233.582 385 238V271C385 275.418 381.418 279 377 279H371V230Z"
             :fill="bouton" class="bouton" />

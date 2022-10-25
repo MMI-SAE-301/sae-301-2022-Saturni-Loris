@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Montre } from "@/types";
-import { colors } from "@/types"
+import { colors, materiaux } from "@/types"
 import { ref } from "vue";
 import MontreProfil from "./MontreProfil.vue";
 import { useRouter } from "vue-router";
@@ -38,7 +38,7 @@ const montrevue = ref<Montre>(props.data ?? {});
 <!-- submit-attrs="{classes: {input: 'bg-green-600'}} -->
 
 <template class="">
-    <div class="flex bg-beige  ">
+    <div class="flex">
         <div class=" w-full h-full">
             <MontreProfil v-bind="montrevue" id="profil" />
         </div>
@@ -84,6 +84,16 @@ const montrevue = ref<Montre>(props.data ?? {});
                             <div class="h-4 w-6  border-2 peer-checked:border-black"
                                 :style="{ backgroundColor: context.option.value }" />
                             <span class="sr-only">{{ context.option.label }}</span>
+                        </template>
+                    </FormKit>
+
+                    <FormKit name="materiaux.value" label="materiaux.value" type="radio" :options="materiaux"
+                        :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
+                        input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
+                        <template #label="context">
+                            <img class="h-16 w-16 rounded-full border-2 peer-checked:border-red-600"
+                                :src="context.option.value" />
+                            <span class="">{{ context.option.label }}</span>
                         </template>
                     </FormKit>
                 </div>

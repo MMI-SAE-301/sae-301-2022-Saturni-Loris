@@ -1,5 +1,17 @@
 <template>
-  <div class="bg-noirfond">
-    <h1>AAA</h1>
+  <div class="">
+    <div class="flex justify-center pt-52 bg-noirfond">
+      <svg width="579" height="105" viewBox="0 0 579 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M30.843 23.05H1.49V0.848991H86.718V23.05H57.216V105H30.843V23.05ZM94.8827 0.848991H121.256V105H94.8827V0.848991ZM134.606 0.848991H160.979V44.059L196.888 0.848991H228.178L186.011 51.509L231.009 105H199.719L160.979 58.959V105H134.606V0.848991ZM316.184 23.05H286.831V0.848991H372.059V23.05H342.557V105H316.184V23.05ZM400.339 0.848991H426.265L467.836 105H440.867L432.523 83.544H394.081L385.737 105H358.619L400.339 0.848991ZM425.967 63.28L413.302 28.265L400.488 63.28H425.967ZM478.296 0.848991H504.669V44.059L540.578 0.848991H571.868L529.701 51.509L574.699 105H543.409L504.669 58.959V105H478.296V0.848991Z"
+          fill="white" />
+      </svg>
+    </div>
+  </div>
+  <div>
+    <h2 class="text-beige font-thin flex justify-center min-h-screen text-center pt-6">Imaginez que vous pouviez
+      entièrement
+      personnaliser votre montre.<br>
+      En partant d’un modèle rafiné, minimaliste et épuré. <br> Créer l’accessoire qui vous ressemble.</h2>
   </div>
 </template>

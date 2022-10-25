@@ -2,13 +2,10 @@
 import { ref } from 'vue'
 import { createClient } from '@supabase/supabase-js'
 import { SupabaseAuthClient } from '@supabase/supabase-js/dist/module/lib/SupabaseAuthClient'
-
 defineProps({
     msg: String
 })
-
 const count = ref(0)
-
 supabase.auth.onAuthStateChange((event, session) => {
     if (session == null) {
         document.getElementById('status').innerHTML = 'You are not logged !!!';
@@ -17,9 +14,6 @@ supabase.auth.onAuthStateChange((event, session) => {
         document.getElementById('status').innerHTML = 'Vous êtes connecté avec le compte: ' + session.user.email;
     }
 })
-
-
-
 </script>
 
 <template>
@@ -29,7 +23,7 @@ supabase.auth.onAuthStateChange((event, session) => {
 
             </div>
             <div class="flex justify-center min-h-screen ">
-                <div class="container sm:mt-40 mt-24 my-auto max-w-md  p-3 shadow-2xl bg-noirfond">
+                <div class="container sm:mt-40 mt-24 my-auto max-w-md  p-3 shadow-xl bg-noirfond">
 
                     <div class="text-center m-6">
                         <h1 class="text-3xl font-semibold font-roboto text-blanctext">S'INSCRIRE</h1>
@@ -101,9 +95,6 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const SUPABASE_URL = "https://ahlzqgaukrgsgmorgyem.supabase.co"
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 export default {
-
-
-
     methods: {
         async logout() {
             try {
