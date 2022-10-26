@@ -35,9 +35,9 @@ const montrevue = ref<Montre>(props.data ?? {});
 
 <template class="">
     <div class="flex gap-20 items-center">
-        <div class="sm:mt-20 mt-20 my-auto max-w-md  shadow-xl ">
+        <div class="sm:mt-20 mt-20 my-auto max-w-md shadow-xl ">
             <FormKit @submit="upsertmontre" type="form" v-model="montrevue"
-                :submit-attrs="{inputClass:'px-4 py-2 font-semibold bg-blanctext'}" submit-label=" Commander">
+                :submit-attrs="{inputClass:'px-4 py-2 font-semibold bg-blanctext'}" submit-label="Commander">
                 <div>
                     <h1 class="text-blanctext font-semibold px-10 py-2 text-3xl">MODÈLE N°59</h1>
                     <p class="text-blanctext px-10 pb-5 text-sm font-thin">Un modèle de montre StreetWear, avec son
@@ -47,27 +47,29 @@ const montrevue = ref<Montre>(props.data ?? {});
                         Permettez-vous de la modifer en apportant votre touche
                         personnel. Profitez d’un choix varié de couleurs, se complémentant
                         avec des bracelets de cuir, de carbone, ou d’anthracite.</p>
+                    <div class="flex gap-52">
+                        <h2 class="text-base ml-3 font-semibold text-blanctext">Coloris</h2>
+                        <h2 class="text-base ml-3 font-semibold text-blanctext">Matériaux</h2>
 
-                    <h2 class="text-base ml-3 font-semibold text-blanctext">Coloris</h2>
-
-                    <div class="flex ml-10">
+                    </div>
+                    <div class="flex ml-10 pb-5">
                         <div>
-                            <p class="text-sm font-thin text-blanctext">Écran</p>
+                            <p class="text-xs font-bold  text-blanctext">ÉCRAN</p>
                             <FormKit class="pl-4" name="ecran" label="" value="#000000" type="radio" :options="colors"
                                 :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                                input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
+                                input-class="peer sr-only" options-class="flex  ml-4 mb-3 mt-1">
 
                                 <template #label="context">
-                                    <div class="h-4 w-6  border-2 peer-checked:border-black"
+                                    <div class="h-4 w-6 rounded-md"
                                         :style="{ backgroundColor: context.option.value }" />
                                     <span class="sr-only">{{ context.option.label }}</span>
                                 </template>
                             </FormKit>
 
-                            <p>Bouton</p>
+                            <p class="text-xs font-bold  text-blanctext">BOUTON</p>
                             <FormKit name="bouton" label="" value="#000000" type="radio" :options="colors"
                                 :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                                input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
+                                input-class="peer sr-only" options-class="flex ml-4 mb-3 mt-1">
                                 <template #label="context">
                                     <div class="h-4 w-6  border-2 peer-checked:border-black"
                                         :style="{ backgroundColor: context.option.value }" />
@@ -75,10 +77,10 @@ const montrevue = ref<Montre>(props.data ?? {});
                                 </template>
                             </FormKit>
 
-                            <p>Bracelet inférieur</p>
+                            <p class="text-xs font-bold  text-blanctext">BRACELET INFÉRIEUR</p>
                             <FormKit name="bracelet_bas" label="" value="#FFFFFF" type="radio" :options="colors"
                                 :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                                input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
+                                input-class="peer sr-only" options-class="flex ml-4 mb-3 mt-1">
                                 <template #label="context">
                                     <div class="h-4 w-6  border-2 peer-checked:border-black"
                                         :style="{ backgroundColor: context.option.value }" />
@@ -86,7 +88,18 @@ const montrevue = ref<Montre>(props.data ?? {});
                                 </template>
                             </FormKit>
 
-                            <p class="text-sm font-thin text-blanctext">Bracelet supérieur</p>
+                            <p class="text-xs font-bold  text-blanctext">JOUR & HEURE</p>
+                            <FormKit name="texte" label="" value="#FFFFFF" type="radio" :options="colors"
+                                :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
+                                input-class="peer sr-only" options-class="flex ml-4 mb-3 mt-1">
+                                <template #label="context">
+                                    <div class="h-4 w-6  border-2 peer-checked:border-black"
+                                        :style="{ backgroundColor: context.option.value }" />
+                                    <span class="sr-only">{{ context.option.label }}</span>
+                                </template>
+                            </FormKit>
+
+                            <p class="text-xs font-bold  text-blanctext">BRACELET SUPÉRIEUR</p>
                             <FormKit name="bracelet_haut" label="" value="#FFFFFF" type="radio" :options="colors"
                                 :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
                                 input-class="peer sr-only" options-class="flex ml-4 mb-3 mt-1">
@@ -97,10 +110,10 @@ const montrevue = ref<Montre>(props.data ?? {});
                                 </template>
                             </FormKit>
 
-                            <p>Cadran</p>
+                            <p class="text-xs font-bold  text-blanctext">CADRAN</p>
                             <FormKit name="cadran" label="" value="#000000" type="radio" :options="colors"
                                 :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                                input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
+                                input-class="peer sr-only" options-class="flex ml-4 mb-3 mt-1">
                                 <template #label="context">
                                     <div class="h-4 w-6  border-2 peer-checked:border-black"
                                         :style="{ backgroundColor: context.option.value }" />
@@ -108,10 +121,12 @@ const montrevue = ref<Montre>(props.data ?? {});
                                 </template>
                             </FormKit>
                         </div>
-                        <div>
-                            <FormKit name="materiaux.value" label="Matériaux" type="radio" :options="materiaux"
+
+                        <div class="text-xs font-bold  text-blanctext">
+
+                            <FormKit name="materiaux.value" label="" type="radio" :options="materiaux"
                                 :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                                input-class="peer sr-only" options-class="flex gap-6 mb-3 mt-1">
+                                input-class="peer sr-only" options-class="flex ml-4 mb-3 mt-1">
                                 <template #label="context">
                                     <img class="h-4 w-6  border-2 peer-checked:border-black"
                                         :src="context.option.value" />

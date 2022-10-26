@@ -4,6 +4,7 @@ export interface Montre {
   bracelet_bas?: string;
   bouton?: string;
   cadran?: string;
+  texte?: string;
   materiaux?: { label: '', value: '' }
 }
 
@@ -16,8 +17,7 @@ export const colors = {
   "#B7D5FF": "BleuClair",
   "#A348CD": "Magenta",
   "#00FFFF": "Cyan",
-  "#C0C0C0": "Gris clair",
-  "#808080": "Gris",
+
   "#E4AAFF": "Rose",
 
 };
