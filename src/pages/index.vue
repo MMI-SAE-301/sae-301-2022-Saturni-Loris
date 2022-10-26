@@ -131,6 +131,15 @@
         <h4 class="font-medium text-noirfond">MODELE N°77 MAUVE FLEUR</h4>
 
       </div>
+
+    </div>
+    <div class="flex justify-center pb-32 text-center">
+      <button>
+        <a href="form"
+          class=" whitespace-nowrap border border-transparent bg-blanctext px-4 py-2 font-roboto font-semibold text-sm text-noirfond shadow-sm hover:bg-noirfond hover:text-blanctext">PERSONNALISER
+          VOTRE MONTRE
+        </a>
+      </button>
     </div>
   </div>
 

@@ -44,7 +44,7 @@
               <a href="login">
                 <img class="p-2 w-auto sm:h-10" src="../public/person_icon.svg" alt="icon de panier">
               </a>
-              <a href="#">
+              <a href="panier">
                 <img class="p-2 w-auto sm:h-10" src="../public/panier_icon.svg" alt="icon de panier">
               </a>
 
