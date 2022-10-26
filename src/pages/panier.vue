@@ -8,6 +8,8 @@ const exemple: Montre = [{
     bouton: "#000000",
     cadran: "#FFFFFF",
 }];
+
+const montre = defineProps(["id", "Montre"]);
 </script>
 
 <template>
@@ -17,7 +19,7 @@ const exemple: Montre = [{
         </div>
         <div class="flex justify-center pb-20 ">
             <div class="w-64">
-                <RouterLink v-for="ex in exemple" :key="exemple.id" :to="{
+                <RouterLink v-for="ex in montre" :key="montre.id" :to="{
                     name: 'montre-exemple-data',
                     params: { data: JSON.stringify(ex) },
                 }">
