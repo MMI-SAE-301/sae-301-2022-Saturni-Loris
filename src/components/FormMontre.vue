@@ -25,7 +25,7 @@ async function upsertmontre(dataForm, node) {
     if (error) node.setErrors([error.message]);
     else {
         node.setErrors([]);
-        router.push({ name: "montre-edit-id", params: { id: data[0].id } });
+        router.push("/panier");
     }
 }
 
@@ -110,8 +110,8 @@ const montrevue = ref<Montre>(props.data ?? {});
             </FormKit>
         </div>
 
-        <div class="">
-            <MontreProfil v-bind="montrevue" id="profil" />
-        </div>
+
+        <MontreProfil class="" v-bind="montrevue" id="profil" />
+
     </div>
 </template>

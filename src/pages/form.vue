@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="pt-16 flex justify-center">
         <FormMontre />
     </div>
 </template>

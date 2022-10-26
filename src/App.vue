@@ -89,7 +89,7 @@
   <Suspense>
     <router-view class="" />
   </Suspense>
-  <footer class="p-4  bg-blanctext shadow md:px-6 md:py-8 dark:bg-gray-900">
+  <footer class="p-4 mt-32 bg-blanctext shadow md:px-6 md:py-8 dark:bg-gray-900">
     <div class="sm:flex sm:items-center sm:justify-between">
       <a href="/" class="flex items-center px-6 mb-4 sm:mb-0">
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TikTak</span>

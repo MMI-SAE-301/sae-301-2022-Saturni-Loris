@@ -29,7 +29,7 @@
       </div>
       <div class="px-44">
         <CarbonEnergetique />
-        <h4 class="font-medium text-beige">MODELE N°02 CARBONE ÉNERGETIQUE</h4>
+        <h4 class="font-medium text-beige ">MODELE N°02 CARBONE ÉNERGETIQUE</h4>
 
       </div>
 
