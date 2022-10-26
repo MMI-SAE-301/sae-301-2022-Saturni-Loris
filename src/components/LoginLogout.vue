@@ -30,7 +30,7 @@ supabase.auth.onAuthStateChange((event, session) => {
                         <p class="font-thin text-sm font-roboto text-blanctext">Créer votre compte, afin de pouvoir
                             réaliser
                             toutes vos
-                            envies en personnalisant nos montre TikTak.</p>
+                            envies en personnalisant nos montres TikTak.</p>
                     </div>
 
                     <div class=" m-6">

@@ -28,3 +28,13 @@ module.exports = {
     require("daisyui"),
   ],
 };
+
+
+// Pour que le dark mode s'adapte au dark mode déjà présent si un utlisateur l'as sur son site
+// if (localStorage.theme === 'dark' | (!('theme' in localStorage)
+//   && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+//   document.documentElement.classList.add('dark')
+// }
+// else {
+//   document.documentElement.classList.remove('dark')
+// }

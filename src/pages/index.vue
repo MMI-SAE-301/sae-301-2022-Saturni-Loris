@@ -22,8 +22,8 @@
     <div class="px-48 font-light underline text-blanctext">
       <h3>CLASSE LISTE</h3>
     </div>
-    <div class="flex justify-center pt-24 content-between">
-      <div class="">
+    <div class="flex justify-center pt-24 ">
+      <div class="pt-28">
         <CuirIntense />
         <h4 class="font-medium text-beige">MODELE N°43 CUIRE INTENSE</h4>
       </div>
@@ -33,7 +33,7 @@
 
       </div>
 
-      <div class="">
+      <div class="pt-28">
         <PierreAnth />
         <h4 class="font-medium text-beige">MODELE N°71 PIERRE ANTHRACITE</h4>
 
@@ -64,7 +64,7 @@
     <div class="flex justify-center pb-64 text-center">
       <button>
         <a href="form"
-          class=" whitespace-nowrap border border-transparent bg-blanctext px-4 py-2 font-roboto font-semibold text-sm text-noirfond shadow-sm hover:bg-noirfond hover:text-blanctext">PERSONNALISER
+          class=" shadow-2xl shadow-stone-500   bg-blanctext px-4 py-2 font-roboto font-semibold text-sm text-noirfond  hover:bg-noirfond hover:text-blanctext">PERSONNALISER
           VOTRE MONTRE
         </a>
       </button>
@@ -77,7 +77,7 @@
     </div>
     <div class="bg-blanctext pb-28">
       <div class="flex justify-center pt-24 content-between pb-11">
-        <div class="">
+        <div class="pt-28">
           <MauveFleur />
           <h4 class="font-medium text-noirfond">MODELE N°13 BLEU MARINE</h4>
         </div>
@@ -87,7 +87,7 @@
 
         </div>
 
-        <div class="">
+        <div class="pt-28">
           <BleuMarine />
           <h4 class="font-medium text-noirfond">MODELE N°77 MAUVE FLEUR</h4>
         </div>
@@ -96,7 +96,7 @@
       <div class="float-right pt-10 pr-10">
         <button>
           <a href="form"
-            class=" whitespace-nowrap border border-transparent bg-noirfond px-4 py-2 font-roboto font-semibold text-sm text-blanctext shadow-sm hover:bg-blanctext hover:text-noirfond">PERSONNALISER
+            class=" bg-noirfond px-4 py-2 font-roboto font-semibold text-sm text-blanctext  hover:bg-blanctext hover:text-noirfond">PERSONNALISER
             VOTRE MONTRE
           </a>
         </button>
@@ -137,7 +137,7 @@
     <div class="flex justify-center pb-32 text-center">
       <button>
         <a href="form"
-          class=" whitespace-nowrap border border-transparent bg-blanctext px-4 py-2 font-roboto font-semibold text-sm text-noirfond shadow-sm hover:bg-noirfond hover:text-blanctext">PERSONNALISER
+          class="  shadow-stone-500   bg-blanctext px-4 py-2 font-roboto font-semibold text-sm text-noirfond shadow-sm hover:bg-noirfond hover:text-blanctext">PERSONNALISER
           VOTRE MONTRE
         </a>
       </button>

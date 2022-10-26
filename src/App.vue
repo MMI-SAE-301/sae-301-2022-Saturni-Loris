@@ -1,11 +1,13 @@
 <template>
   <div class="">
 
-    <div class="bg-white dark:bg-black dark:text-white text-center py-3 font-roboto">Pas d’idée pour un cadeau de noël ?
+    <div class="bg-white dark:bg-black dark dark:text-white text-center py-3 font-roboto">Pas d’idée pour un cadeau de
+      noël ?
       Profitez des frais
       d’expédition gratuits sur les <strong>50
         premières ventes</strong>
     </div>
+
 
 
 
@@ -22,19 +24,7 @@
                 </svg>
               </a>
             </div>
-            <div class="-my-2 -mr-2 md:hidden">
-              <button type="button"
-                class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                aria-expanded="false">
-                <span class="sr-only">Open menu</span>
-                <!-- Heroicon name: outline/bars-3 -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-              </button>
-            </div>
+
             <nav class="hidden space-x-20 md:flex">
 
               <a href="/" class="text-sm font-medium hover:text-beige text-blanctext hover:underline">ACCUEIL</a>

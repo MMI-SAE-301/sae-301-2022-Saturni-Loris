@@ -10,22 +10,21 @@
         <h1>NOS PRODUITS</h1>
     </div>
 
-    <div class=" pt-12
-      grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
+    <div class="flex justify-center pt-24 content-between gap-40
     ">
         <div class=" ">
-            <CuirIntense />
+            <MauveFleur />
         </div>
         <div class=" ">
             <CuirIntense />
         </div>
         <div class=" ">
-            <CuirIntense />
+            <PierreAnth />
         </div>
 
     </div>
 
-    <div class="flex justify-center pt-24 content-between">
+    <div class="flex justify-center pt-24 content-between gap-40">
         <div class="">
             <CuirIntense />
         </div>
