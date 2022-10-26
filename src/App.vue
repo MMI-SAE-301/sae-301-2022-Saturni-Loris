@@ -2,7 +2,7 @@
   <div class="">
 
     <div class="bg-blanctext text-center py-3 font-roboto">Pas d’idée pour un cadeau de noël ? Profitez des frais
-      d’expédition gratuits sur les 50<strong>
+      d’expédition gratuits sur les <strong>50
         premières ventes</strong>
     </div>
     <nav class="shadow-xl">
@@ -44,7 +44,7 @@
               <a href="login">
                 <img class="p-2 w-auto sm:h-10" src="../public/person_icon.svg" alt="icon de panier">
               </a>
-              <a href="panier">
+              <a href="#">
                 <img class="p-2 w-auto sm:h-10" src="../public/panier_icon.svg" alt="icon de panier">
               </a>
 
