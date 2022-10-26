@@ -19,9 +19,7 @@ supabase.auth.onAuthStateChange((event, session) => {
 <template>
     <div>
         <div class="">
-            <div>
 
-            </div>
             <div class="flex justify-center min-h-screen ">
                 <div class="container sm:mt-20 mt-20 my-auto max-w-md  shadow-xl bg-noirfond">
 
