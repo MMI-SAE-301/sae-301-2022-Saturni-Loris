@@ -1,5 +1,7 @@
 <template>
-    <FormMontre />
+    <div>
+        <FormMontre />
+    </div>
 </template>
 
 <script setup lang="ts">
