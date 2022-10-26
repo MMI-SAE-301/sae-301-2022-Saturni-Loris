@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <div class="">
       <div class="flex justify-center pt-52 bg-noirfond">
