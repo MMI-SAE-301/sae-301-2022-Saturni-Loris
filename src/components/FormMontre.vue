@@ -48,9 +48,9 @@ const montrevue = ref<Montre>(props.data ?? {});
                         personnel. Profitez d’un choix varié de couleurs, se complémentant
                         avec des bracelets de cuir, de carbone, ou d’anthracite.</p>
 
-                    <h2 class="text-base font-semibold text-blanctext">Coloris</h2>
+                    <h2 class="text-base ml-3 font-semibold text-blanctext">Coloris</h2>
 
-                    <div class="flex">
+                    <div class="flex ml-10">
                         <div>
                             <p class="text-sm font-thin text-blanctext">Écran</p>
                             <FormKit class="pl-4" name="ecran" label="" value="#000000" type="radio" :options="colors"
@@ -86,10 +86,10 @@ const montrevue = ref<Montre>(props.data ?? {});
                                 </template>
                             </FormKit>
 
-                            <p>Bracelet supérieur</p>
+                            <p class="text-sm font-thin text-blanctext">Bracelet supérieur</p>
                             <FormKit name="bracelet_haut" label="" value="#FFFFFF" type="radio" :options="colors"
                                 :sections-schema="{ inner: { $el: null }, decorator: { $el: null }, }"
-                                input-class="peer sr-only" options-class="flex gap-1 mb-3 mt-1">
+                                input-class="peer sr-only" options-class="flex ml-4 mb-3 mt-1">
                                 <template #label="context">
                                     <div class="h-4 w-6  border-2 peer-checked:border-black"
                                         :style="{ backgroundColor: context.option.value }" />
