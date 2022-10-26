@@ -1,7 +1,8 @@
 <template>
   <div class="">
 
-    <div class="bg-blanctext text-center py-3 font-roboto">Pas d’idée pour un cadeau de noël ? Profitez des frais
+    <div class="bg-white dark:bg-black dark:text-white text-center py-3 font-roboto">Pas d’idée pour un cadeau de noël ?
+      Profitez des frais
       d’expédition gratuits sur les <strong>50
         premières ventes</strong>
     </div>
