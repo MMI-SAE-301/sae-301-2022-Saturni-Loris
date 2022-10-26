@@ -74,8 +74,8 @@
     <div class="px-48 pb-10 font-light underline text-blanctext">
       <h3>STREETWEAR LISTE</h3>
     </div>
-    <div>
-      <div class="flex justify-center pt-24 content-between bg-blanctext">
+    <div class="bg-blanctext pb-28">
+      <div class="flex justify-center pt-24 content-between pb-11">
         <div class="">
           <MauveFleur />
           <h4 class="font-medium text-noirfond">MODELE N°13 BLEU MARINE</h4>
@@ -89,15 +89,13 @@
         <div class="">
           <BleuMarine />
           <h4 class="font-medium text-noirfond">MODELE N°77 MAUVE FLEUR</h4>
-
         </div>
-
       </div>
 
-      <div class="flex justify-center">
+      <div class="float-right pt-10 pr-10">
         <button>
           <a href="form"
-            class=" whitespace-nowrap border border-transparent bg-blanctext px-4 py-2 font-roboto font-semibold text-sm text-noirfond shadow-sm hover:bg-noirfond hover:text-blanctext">PERSONNALISER
+            class=" whitespace-nowrap border border-transparent bg-noirfond px-4 py-2 font-roboto font-semibold text-sm text-blanctext shadow-sm hover:bg-blanctext hover:text-noirfond">PERSONNALISER
             VOTRE MONTRE
           </a>
         </button>
@@ -106,16 +104,33 @@
   </div>
 
   <div>
-    <div>
-      <h2 class="text-beige font-semibold text-2xl pt-40 flex justify-center text-center">Prenez en charge votre style
+    <div class="pt-72">
+      <h2 class="text-beige font-semibold text-2xl flex justify-center text-center">Prenez en charge votre style
         avec
         la
         dernière nouveauté de Tik Tak.</h2>
-      <h3 class="text-beige text-sm font-thin flex justify-center pb-64 text-center pt-6">Du bracelet de la montre aux
+      <h3 class="text-beige text-sm font-thin flex justify-center pb-10 text-center pt-6">Du bracelet de la montre aux
         différents cadrans d'activité en passant par les accessoires, vous trouverez<br>
         ici le compagnon qu'il vous faut. À partir d, vous aurez la possibilité d’associer un bracelet coloré avec
         un<br> matériel. Qu’attendez-vous pour portre du carbone, cuir ou encore de l’anthracite à votre poignet.
       </h3>
+    </div>
+    <div class="flex justify-center pt-24 content-between">
+      <div class="">
+        <FlipGauche />
+        <h4 class="font-medium text-noirfond">MODELE N°13 BLEU MARINE</h4>
+      </div>
+      <div class="px-44">
+        <Bleu />
+        <h4 class="font-medium text-noirfond">MODELE N°07 JAUNE NAT FLAMBOYANT</h4>
+
+      </div>
+
+      <div class="">
+        <FlipDroit />
+        <h4 class="font-medium text-noirfond">MODELE N°77 MAUVE FLEUR</h4>
+
+      </div>
     </div>
   </div>
 
@@ -129,4 +144,8 @@ import PierreAnth from "../components/montre/PierreAnth.vue";
 import MauveFleur from "../components/montre/MauveFleur.vue";
 import JauneFlamboyant from "../components/montre/JauneFlamboyant.vue";
 import BleuMarine from "../components/montre/BleuMarine.vue";
+
+import Bleu from "../components/montre/Bleu.vue";
+import FlipDroit from "../components/montre/FlipDroit.vue";
+import FlipGauche from "../components/montre/FlipGauche.vue";
 </script>
