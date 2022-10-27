@@ -8,10 +8,10 @@ defineProps({
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+  <div class="">
+    <h1 class="">{{ msg }}</h1>
     <h3>
-      Change the world with your words !!!
+
     </h3>
   </div>
 </template>

@@ -20,6 +20,11 @@ const montre = defineProps(["id", "Montre"]);
 </script>
 
 <template>
+
+    <div class="px-48 pt-36 font-light underline text-blanctext">
+        <h1>VOS PRODUITS CRÉÉS</h1>
+    </div>
+
     <div class="justify-center pt-24 content-between pl-40
         ">
         <div class=" grid grid-cols-2">
