@@ -150,7 +150,7 @@ const montrevue = ref<Montre>(props.data ?? {});
                     <FormKit type="submit" input-class="px-4 py-2 font-semibold bg-blanctext">Commander
                     </FormKit>
                     <FormKit v-if="props.id" name="commander" label="commander" type="button"></FormKit>
-                    <FormKit v-if="props.id" name="Supprimer" label="supprimer" type="button"></FormKit>
+                    <!-- <FormKit v-if="props.id" name="Supprimer" label="supprimer" type="button"></FormKit> -->
 
                 </div>
 

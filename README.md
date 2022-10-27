@@ -31,11 +31,11 @@ Noté sur 40.
 - Code et Commit (0-2-4-6pts)
 - Code HTML spécifiquement sémantique et accessible (0-1-2pts)
 
-- [x] usage de Classes utilitaires (1pt)
+- [X] usage de Classes utilitaires (1pt)
   - [lien vers sa définition](/tailwind.config.js#L12)
   - [lien vers sa son usage](/src/App.vue#L23)
 
-- [ ] Composants graphiques (0-1-2pts)
+- [X] Composants graphiques (0-1-2pts)
   - [lien](/src/components/LoginLogout.vue#L19)
 
 - Technique CSS (0-1-2pts)
@@ -57,10 +57,11 @@ Noté sur 40.
     - liens
 - "tailwin.config.js" (0-1-2pts)
   - [X] [usage basique couleurs/fonts](/tailwind.config.js#L17)
-  - [ ] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
+  - [X] Comporte des données supplémentaires (utilisées !). Eg: "content-xxx", "bg-xxx", "grid-cols-xxx"...
     - [lien](/tailwind.config.js#L12)
 - Composants "accessibles" (0-1-2pts)
-  - [ ] textes "accessibles" (eg. 'sr-only')
+  - [X] textes "accessibles" (eg. 'sr-only')
+  - [lien](/src/components/FormMontre.vue#L71)
   - [ ] Contenu accessible ET Usage de composants étudié pour accessibilité (Eg. HeadlessUI)
 
 [^1]: Supprimez les mentions inutiles.
