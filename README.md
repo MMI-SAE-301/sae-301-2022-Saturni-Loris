@@ -45,6 +45,7 @@ Noté sur 40.
 - [X] Dark Mode (0-1-2pts)
   - [X] Simple usage de 'dark:'
     - [lien](/App.vue#L83)
+    - [lien](/src/pages/index.vue#L78)
 
   - [X] [usage basique couleurs/fonts](/tailwind.config.js#L17)
 

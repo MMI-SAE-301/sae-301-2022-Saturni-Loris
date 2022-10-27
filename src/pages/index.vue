@@ -75,7 +75,7 @@
     <div class="px-48 pb-10 font-light underline text-blanctext">
       <h3>STREETWEAR LISTE</h3>
     </div>
-    <div class="bg-blanctext pb-28">
+    <div class="bg-blanctext pb-28 dark:bg-black">
       <div class="flex justify-center pt-24 content-between pb-11">
         <div class="pt-28">
           <MauveFleur />
