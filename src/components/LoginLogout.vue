@@ -33,12 +33,12 @@ const nvlUtilisateur = ref(false);
             <div>
 
             </div>
-            <div class="flex justify-center min-h-screen ">
+            <div class="flex justify-center min-h-screen gap-36">
                 <div class="container sm:mt-40 mt-24 my-auto max-w-md  p-3 shadow-xl bg-noirfond">
 
                     <div class="text-center m-6">
                         <h1 class="text-3xl font-semibold font-roboto text-blanctext">S'INSCRIRE</h1>
-                        <p class="font-thin text-sm font-roboto text-blanctext">Créer votre compte, afin de pouvoir
+                        <p class="font-thin text-sm font-roboto text-blanctext pb-8">Créer votre compte, afin de pouvoir
                             réaliser
                             toutes vos
                             envies en personnalisant nos montres TikTak.</p>
@@ -46,7 +46,7 @@ const nvlUtilisateur = ref(false);
 
                     <div class=" m-6">
 
-                        <div class="flex flex-row gap-2">
+                        <div class="flex flex-row gap-2 pb-20">
                             <button @click="login()"
                                 class="bg-blanctext text-noirfond  w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-beige duration-100 ease-in-out">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -77,19 +77,39 @@ const nvlUtilisateur = ref(false);
                         </div>
                     </div>
                 </div>
+                <div class="justify-center min-h-screen">
+                    <div class="container sm:mt-40 mt-24 my-auto max-w-md  p-3 shadow-xl bg-noirfond">
+                        <button v-if="user" @pointerdown="supabase.auth.signOut()">
+                            Se déconnecter ({{ user.email }})
+                        </button>
+
+                        <FormKit v-else type="form" :submit-label="nvlUtilisateur ? 'S\'inscrire' : 'Se connecter'"
+                            @submit="signIn">
+                            <h1 class="text-3xl font-semibold font-roboto text-blanctext text-center m-2   ">S'INSCRIRE
+                                VIA
+                                MAIL</h1>
+
+                            <h1 class="font-thin text-sm font-roboto text-blanctext">Votre mail</h1>
+                            <FormKit name=" email" label="" type="email" />
+                            <h1 class="font-thin text-sm font-roboto text-blanctext">Votre mot de passe</h1>
+                            <FormKit name="password" label="" type="password" />
+                            <p class="font-thin text-sm font-roboto text-blanctext pt-6">Nouvel utilisateur ? Cocher la
+                                case
+                                ci-dessous.</p>
+                            <div>
+                                <formKit label="" name="nvlUtilisateur" type="checkbox" v-model="nvlUtilisateur" />
+                            </div>
+                            <p>Pensez à confirmer vos mail dans votre boîte de réception.</p>
+                        </FormKit>
+                    </div>
+
+
+                </div>
             </div>
-            <div>
-                <button v-if="user" @pointerdown="supabase.auth.signOut()">
-                    Se déconnecter ({{ user.email }})
-                </button>
-                <FormKit v-else type="form" :submit-label="nvlUtilisateur ? 'S\'inscrire' : 'Se connecter'"
-                    @submit="signIn">
-                    <FormKit name="email" label="Votre eMail" type="email" />
-                    <FormKit name="password" label="Mot de passe" type="password" />
-                    <formKit label="Nouvel utilisateur ?" name="nvlUtilisateur" type="checkbox"
-                        v-model="nvlUtilisateur" />
-                </FormKit>
-            </div>
+
+
+
+
         </div>
     </div>
 </template>
