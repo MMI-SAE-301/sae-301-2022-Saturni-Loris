@@ -20,9 +20,9 @@ const montre = defineProps(["id", "Montre"]);
 </script>
 
 <template>
-    <div class="flex justify-center pt-24 content-between gap-40
+    <div class="justify-center pt-24 content-between pl-40
         ">
-        <div class=" flex">
+        <div class=" grid grid-cols-2">
             <MontreProfil v-for="Liste_Montre in listeMontre" :key="Liste_Montre.id" v-bind="Liste_Montre" />
         </div>
     </div>

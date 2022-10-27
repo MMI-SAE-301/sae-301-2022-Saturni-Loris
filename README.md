@@ -35,7 +35,7 @@ Noté sur 40.
   - [lien vers sa son usage](/src/App.vue#L23)
 
 - [X] Composants graphiques (0-1-2pts)
-  - [lien](/src/components/LoginLogout.vue#L19)
+  - [lien](/src/components/LoginLogout.vue)
 
 - Mise en page CSS (0-1-2pts)
   - Quelles techniques (Grilles Flex...)
