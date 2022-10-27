@@ -15,6 +15,14 @@
 -- primary key (id) ) ;
 
 
+-- create table Materiaux (
+-- id uuid not null default
+-- uuid_generate_v4() ,
+-- libelle text,
+-- utilisateur uuid references auth.users
+-- not null default uid(),
+-- primary key (id) ) ;
+
 
 -- code pour la création des vues
 --
