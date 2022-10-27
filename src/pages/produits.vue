@@ -7,7 +7,7 @@
 <template>
 
     <div class="px-48 pt-36 font-light underline text-blanctext">
-        <h1>NOS PRODUITS</h1>
+        <h1>NOS PRODUITS PHARES</h1>
     </div>
 
     <div class="flex justify-center pt-24 content-between gap-40
